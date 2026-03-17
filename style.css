@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: #1e1e2f; /* dark background for contrast */
+    font-family: 'Arial', sans-serif;
+}
+
+#text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( 50%, 50%);
+    font-size: 2rem;
+    color: #ff5c8d;
+    text-shadow: 2px 2px 8px #ffb6c1;
+    font-weight: bold;
+}
