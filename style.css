@@ -1,17 +1,24 @@
 body {
     margin: 0;
     overflow: hidden;
-    background: #1e1e2f; /* dark background for contrast */
-    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #2b2b45);
+    font-family: 'Poppins', sans-serif;
 }
-
+/* Import stylish font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
 #text {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate( 50%, 50%);
-    font-size: 2rem;
-    color: #ff5c8d;
-    text-shadow: 2px 2px 8px #ffb6c1;
-    font-weight: bold;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 600px;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #ffffff;
+    background: rgba(255, 92, 141, 0.1);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(255, 92, 141, 0.4);
+    backdrop-filter: blur(10px);
 }
