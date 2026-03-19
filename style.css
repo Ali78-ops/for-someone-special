@@ -1,24 +1,46 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
 body {
     margin: 0;
-    overflow: hidden;
     background: linear-gradient(135deg, #1e1e2f, #2b2b45);
     font-family: 'Poppins', sans-serif;
+    /* Allow scrolling */
+    overflow-x: hidden;
+    overflow-y: auto;
 }
-/* Import stylish font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+/* Canvas stays fixed in background */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+/* Text container */
 #text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    position: relative;
+    margin: 50px auto;
+    padding: 20px;
     max-width: 600px;
-    font-size: 1.4rem;
+    width: 90%;
+    text-align: center;
+    font-size: 1.2rem;
     line-height: 1.6;
     color: #ffffff;
+    animation: fadeIn 2s ease;
     background: rgba(255, 92, 141, 0.1);
-    padding: 25px;
     border-radius: 20px;
     box-shadow: 0 0 25px rgba(255, 92, 141, 0.4);
     backdrop-filter: blur(10px);
+    @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+}
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    #text {
+        font-size: 1rem;
+        padding: 15px;
+        margin: 30px auto;
+    }
 }
