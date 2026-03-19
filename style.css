@@ -1,46 +1,42 @@
-/* Import font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+* {
+    box-sizing: border-box;
+}
 body {
     margin: 0;
-    background: linear-gradient(135deg, #1e1e2f, #2b2b45);
     font-family: 'Poppins', sans-serif;
-    /* Allow scrolling */
+    background: linear-gradient(135deg, #1e1e2f, #2b2b45);
+    /* IMPORTANT: allow full scrolling */
+    min-height: 100vh;
     overflow-x: hidden;
-    overflow-y: auto;
 }
-/* Canvas stays fixed in background */
+/* Canvas fixed background */
 canvas {
     position: fixed;
     top: 0;
     left: 0;
     z-index: -1;
 }
-/* Text container */
+/* Main container */
 #text {
-    position: relative;
-    margin: 50px auto;
-    padding: 20px;
-    max-width: 600px;
-    width: 90%;
+    max-width: 700px;
+    width: 92%;
+    margin: 60px auto;
+    padding: 25px;
     text-align: center;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #ffffff;
-    animation: fadeIn 2s ease;
-    background: rgba(255, 92, 141, 0.1);
+    font-size: clamp(16px, 4vw, 20px); /* MAGIC for mobile */
+    line-height: 1.7;
+    color: #fff;
+    background: rgba(255, 92, 141, 0.12);
     border-radius: 20px;
-    box-shadow: 0 0 25px rgba(255, 92, 141, 0.4);
+    box-shadow: 0 0 30px rgba(255, 92, 141, 0.4);
     backdrop-filter: blur(10px);
-    @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
 }
-}
-/* Mobile responsiveness */
-@media (max-width: 600px) {
+/* Small screens */
+@media (max-width: 480px) {
     #text {
-        font-size: 1rem;
-        padding: 15px;
         margin: 30px auto;
+        padding: 18px;
+        line-height: 1.6;
     }
 }
